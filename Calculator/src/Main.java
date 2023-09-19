@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args) {
 
         Converter converter = new Converter();
-        String[] actions = {"+", "-", "/", "*"};
+        String[] actions = {"+", "-", "*", "/"};
         String[] actions1 = {"\\+", "-", "\\*", "/"};
         Scanner sc = new Scanner(System.in);
         System.out.println("Введите, пожалуйста, арифметическую операцию, которую следует выполнить / калькулировать (Input)! \n" +
