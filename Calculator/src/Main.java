@@ -52,7 +52,10 @@ public class Main {
 
                 int result = 0;
 
-                try {
+                if ((a > 10 || a < 1) || (b > 10 || b < 1)) {
+                    throw new IOException("Вы некорректно ввели арифметическую операцию.");
+                }
+
                     if (a >= 1 && b >= 1 && a <= 10 && b <= 10) {
 
                         switch (actions[actionIndex]) {
@@ -76,12 +79,9 @@ public class Main {
                             System.out.println("Результатом выполнения арифметической операции / калькуляции является число (Output): " + result);
                         }
                     }
-                }catch (Exception e){
-                    System.out.println("Вы ввели не тот символ / не те символы.");
-                }
             }
         } catch (Exception e) {
-            System.out.println("Вы ввели не тот символ / не те символы.");
+            System.out.println("Вы некорректно ввели арифметическую операцию.");
         }
         return "";
     }
